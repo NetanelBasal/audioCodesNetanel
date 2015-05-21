@@ -1,0 +1,251 @@
+{
+   "gw":{
+      "trunkGroups":[
+         {
+            "id":123,
+            "ind":3,
+            "label1":"Trunk Group",
+            "label2":"#1",
+            "connectedTo":[
+               {
+                  "id":111,
+                  "type":"solid/dashed"
+               }
+            ]
+         },
+          {
+            "id":124,
+            "ind":3,
+            "label1":"Trunk Group",
+            "label2":"#2",
+            "connectedTo":[
+               {
+                  "id":112,
+                  "type":"solid/dashed"
+               }
+            ]
+         },
+              {
+            "id":124,
+            "ind":3,
+            "label1":"Trunk Group",
+            "label2":"#3",
+            "connectedTo":[
+               {
+                  "id":113,
+                  "type":"solid/dashed"
+               }
+            ]
+         },
+              {
+            "id":124,
+            "ind":3,
+            "label1":"Trunk Group",
+            "label2":"#4",
+            "connectedTo":[
+               {
+                  "id":114,
+                  "type":"solid/dashed"
+               }
+            ]
+         }
+      ],
+      "physPorts":[
+         {
+            "id":111,
+            "type":"E1/T1",
+            "label":"BRI",
+            "count":2,
+            "cmds":[
+               {
+                  "label":"Tel List",
+                  "href":"/goTelList"
+               }
+            ]
+         },
+           {
+            "id":112,
+            "type":"BRI",
+            "label":"E1/T1",
+            "count":2,
+            "cmds":[
+               {
+                  "label":"Tel List",
+                  "href":"/goTelList"
+               }
+            ]
+         },
+            {
+            "id":113,
+            "type":"BRI",
+            "count":0,
+            "label":"FXO 1",
+            "cmds":[
+               {
+                  "label":"Tel List",
+                  "href":"/goTelList"
+               }
+            ]
+         },
+            {
+            "id":114,
+            "type":"BRI",
+            "label":"FXO 2",
+            "count":0,
+            "cmds":[
+               {
+                  "label":"Tel List",
+                  "href":"/goTelList"
+               }
+            ]
+         }
+
+      ],
+      "cmds":[
+         {
+            "label":"NUmber Manipulation",
+            "href":"/goTelList",
+            "type":"link | sep | help",
+            "status":{
+               "type":"invalid | invalidRef | conected | disconnected",
+               "tooltip":"bla"
+            }
+         }
+      ]
+   },
+   "ipGroupsDown":[
+      {
+         "id":1001,
+         "label1":"IP Group [Server]",
+         "label2":"#1 [COMSEC]",
+         "status":{
+
+         },
+         "info":"connected to bla",
+         "srd":{
+            "id":111,
+            "name":"IBM-IL"
+         },
+         "connectedTo":[
+            {
+               "id":4,
+               "type":"solid/dashed"
+            }
+         ]
+      },
+           {
+         "id":1001,
+         "label1":"IP Group [Server]",
+         "label2":"#2 [COMSEC]",
+         "status":{
+
+         },
+         "info":"connected to bla",
+         "srd":{
+            "id":111,
+            "name":"IBM-IL"
+         },
+         "connectedTo":[
+            {
+               "id":3,
+               "type":"solid/dashed"
+            }
+         ]
+      },
+           {
+         "id":1001,
+         "label1":"IP Group [Server]",
+         "label2":"#3 [COMSEC]",
+         "status":{
+
+         },
+         "info":"connected to bla",
+         "srd":{
+            "id":111,
+            "name":"IBM-IL"
+         },
+         "connectedTo":[
+            {
+               "id":5,
+               "type":"solid/dashed"
+            }
+         ]
+      },
+              {
+         "id":1001,
+         "label1":"IP Group [Server]",
+         "label2":"#3 [COMSEC]",
+         "status":{
+
+         },
+         "info":"connected to bla",
+         "srd":{
+            "id":4,
+            "name":"IBM-IL"
+         },
+         "connectedTo":[
+            {
+               "id":1,
+               "type":"solid/dashed"
+            }
+         ]
+      },
+              {
+         "id":1001,
+         "label1":"IP Group [Server]",
+         "label2":"#3 [COMSEC]",
+         "status":{
+
+         },
+         "info":"connected to bla",
+         "srd":{
+            "id":111,
+            "name":"IBM-IL"
+         },
+         "connectedTo":[
+            {
+               "id":3,
+               "type":"solid/dashed"
+            }
+         ]
+      },
+              {
+         "id":1001,
+         "label1":"IP Group [Server]",
+         "label2":"#3 [COMSEC]",
+         "status":{
+
+         },
+         "info":"connected to bla",
+         "srd":{
+            "id":111,
+            "name":"IBM-IL"
+         },
+         "connectedTo":[
+            {
+               "id":2,
+               "type":"solid/dashed"
+            }
+         ]
+      },
+              {
+         "id":1001,
+         "label1":"IP Group [Server]",
+         "label2":"#3 [COMSEC]",
+         "status":{
+
+         },
+         "info":"connected to bla",
+         "srd":{
+            "id":111,
+            "name":"IBM-IL"
+         },
+         "connectedTo":[
+            {
+               "id":1,
+               "type":"solid/dashed"
+            }
+         ]
+      }
+   ]
+}

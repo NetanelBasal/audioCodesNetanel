@@ -1,0 +1,123 @@
+.roundRectBase {
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 2px #499de0;
+  text-align: center;
+  margin-right: 4px;
+}
+
+.link-plus(@height, @border:rgba(73,157,224,.35), @color:#499de0) {
+  width: 20px;
+  line-height: @height;
+  height: @height;
+  cursor:pointer;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  color:@color;
+  background-color: #fff;
+  border: solid 2px @border;
+}
+
+.roundRect(@width, @height,@borderColor:#499de0) {
+    border-color:@borderColor;
+    width: @width;
+    height: @height;
+    label {
+      display: block;
+    &:first-child {
+      color:#9A9FA5;
+      font-style: italic;
+      font-size: 11px;
+    }
+    &:last-child {
+      color:#3d4c5a;
+      font-size: 12px;
+    }
+  }
+}
+
+.count::after {
+      content: attr(data-count);
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 2px;
+      background-color: #499de0;
+      color:#fff;
+      text-align: center;
+      z-index: 1;
+      line-height: 1.2;
+      font-size: 10px;
+      top: -3px;
+      right: -4px;
+}
+
+
+.trunk {
+  &:extend(.roundRectBase);
+  .roundRect(80px, 37px);
+  padding: 2px;
+}
+
+.SIP {
+   &:extend(.roundRectBase);
+    .roundRect(96px, 40px);
+    ~ .link-plus {
+      .link-plus(40px);
+    }
+}
+
+.Realm {
+     &:extend(.roundRectBase);
+    .roundRect(67px, 40px, #9980c5);
+    ~ .link-plus {
+      .link-plus(40px,rgba(163,139,204,.35),#a38bcc);
+    }
+}
+
+.ip {
+    &:extend(.roundRectBase);
+    .roundRect(105px, 40px);
+    margin-right: 7px;
+}
+
+.circle {
+  position: relative;
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  line-height: 33px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 2px #499de0;
+  text-align: center;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+.doubleCircle {
+  position:absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 2px #499de0;
+  width: 37px;
+  height: 37px;
+  content:'';
+  left: -2px;
+  top: -2px;
+}
+
+span.invalid::after {
+  content:'';
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ec008c;
+  margin-left: 2px;
+  transform: translateY(-1px);
+}
+

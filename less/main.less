@@ -1,0 +1,158 @@
+@import 'reset.less';
+@import '_vars.less';
+@import 'grid';
+@import 'mixins';
+@import 'helpers';
+
+
+body{
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x:hidden;
+  margin:50px;
+}
+
+
+.mainContent {
+  width: 1080px;
+  height:478px;
+  border: 1px solid #C9CED3;
+  background: url('../img/bg.png') no-repeat;
+}
+
+.header {
+  color:#c6d0e4;
+  font-size: 18px;
+  width:387px;
+  text-align: center;
+  padding-top: 5px;
+  &::after {
+    background: url("../img/pen.png") no-repeat;
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+}
+
+#PSTN {
+  margin-left: 10px;
+  margin-top: 7px;
+  display: flex;
+}
+
+#middle {
+  width:100%px;
+  height:201px;
+  background: url('../img/bgmiddle.png') no-repeat;
+  background-position: 50%;
+  margin-top: 70px;
+}
+
+.physPorts {
+  width:232px;
+  display: inline-block;
+  margin-left: 110px;
+  margin-top: 12px;
+  p {
+    display: inline-block;
+    color:#ADBABF;
+    font-size: 10px;
+    width: 40px;
+    vertical-align: middle;
+  }
+}
+
+
+
+.GW-links, .SBC-links {
+  width:370px;
+  margin-left: 125px;
+  margin-top: 15px;
+  float:left;
+  position:relative;
+  h3 {
+    font-size: 24px;
+    color:#48617E;
+    position:absolute;
+    top: 13%;
+  left: 75%;
+  font-weight: normal;
+  }
+  a {
+    display: block;
+    font-size: 11px;
+    line-height: 2.2em;
+    color: @link;
+    width:136px;
+    position:relative;
+    &::after {
+      content: '>';
+      position: absolute;
+      right:0;
+    }
+  }
+}
+.GW-links {
+  a:nth-child(3) {
+      border-bottom: 1px solid #cae0ec;
+      padding-bottom: 3px;
+    }
+    a:nth-child(4) {
+      padding-top: 3px;
+    }
+}
+
+.SBC-links {
+  margin-left: 20px;
+  margin-top: -13px;
+  h3 {
+    left: 53%;
+    top: 35%;
+  }
+  a {
+    width: 138px;
+  }
+a:nth-child(2)::before {
+  content:'';
+  background: url('../img/questcircle.png') no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width:17px;
+  height:17px;
+  margin-right: 5px;
+}
+    a:nth-child(5),   a:nth-child(2){
+      border-bottom: 1px solid #cae0ec;
+      padding-bottom: 3px;
+    }
+    a:nth-child(6) {
+      padding-top: 3px;
+    }
+}
+
+.SIP-Realm {
+    margin-left: 310px;
+    transform: translateY(-15px);
+    display: flex;
+    .inside-SBC {
+      display: inline-block;
+      transform: translateX(130px);
+      display: flex;
+    }
+}
+
+.Realm-wrap {
+  display: flex;
+  transform: translateX(155px);
+}
+
+.IPGroup {
+  margin-left: 100px;
+  margin-top: 40px;
+  display: flex;
+}

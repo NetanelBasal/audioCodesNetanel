@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>AudioCodes</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="audioCodes" ng-controller="HomeController">
+    <div class="mainContent">
+      <div id="firstRow">
+        <p class="header">PSTN</p>
+        <div id="PSTN">
+          <div class="trunk"
+            ng-repeat="trunk in data.gw.trunkGroups"
+            draw-lines
+            data="trunk"
+            >
+            <label>{{trunk.label1}}</label>
+            <label>{{trunk.label2}}</label>
+          </div>
+        </div>
+      </div>
+      <div id="middle">
+        <div class="physPorts">
+          <p>Trunks & Ports</p>
+          <label ng-repeat="port in data.gw.physPorts"
+            class="circle"
+            id="{{port.id}}"
+            data-count="{{port.count}}"
+            ng-class="{count: port.count}">
+            {{port.label}}
+          </label>
+
+        </div>
+        <div class="row">
+          <div class="GW-links">
+            <h3>GW</h3>
+            <a href="">Number Manipulation</a>
+            <a href="">Routing</a>
+            <a href="">DTMF & Daiiling</a>
+            <a href="">Supplementary Services</a>
+            <a href="">GW Settings</a>
+          </div>
+          <div class="SBC-links">
+            <h3>SBC</h3>
+            <a href="">Call Flow Explained</a>
+            <a href="">Classifications</a>
+            <a href="">Number Manipulation</a>
+            <a href="">Routing <span class="invalid"></span></a>
+            <a href="">SBC Settings <span class="invalid"></span></a>
+          </div>
+        </div>
+        <div class="row SIP-Realm">
+          <div class="SIP" id="1">
+            <label>SIP Interface</label>
+            <label>#1 [GW LAN]</label>
+          </div>
+          <a class="link-plus">+</a>
+
+          <div class="inside-SBC">
+            <div class="SIP" id="2">
+              <label>SIP Interface</label>
+              <label>#1 [GW LAN]</label>
+            </div>
+            <div class="SIP" id="3">
+              <label>SIP Interface</label>
+              <label>#1 [GW LAN]</label>
+            </div>
+            <a class="link-plus">+</a>
+          </div>
+
+          <div class="Realm-wrap">
+            <div class="Realm" id="4">
+              <label>Realm</label>
+              <label>#1 [LAN1]</label>
+            </div>
+             <div class="Realm" id="5">
+              <label>Realm</label>
+              <label>#2 [LAN2]</label>
+            </div>
+               <a class="link-plus">+</a>
+          </div>
+
+        </div>
+
+        <div class="row IPGroup">
+            <div class="ip"
+            ng-repeat="ip in data.ipGroupsDown"
+            draw-lines
+            reverse="true"
+            data="ip">
+              <label>{{ip.label1}}</label>
+              <label>{{ip.label2}}</label>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="drawLine.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
