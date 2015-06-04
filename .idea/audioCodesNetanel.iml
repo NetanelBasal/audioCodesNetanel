@@ -5,6 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="audioCodesNetanel node_modules" level="project" />
+    <orderEntry type="library" name="zepto-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="angularjs-DefinitelyTyped" level="application" />
   </component>
 </module>
-

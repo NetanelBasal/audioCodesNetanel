@@ -8,93 +8,182 @@
   </head>
   <body ng-app="audioCodes" ng-controller="HomeController">
     <div class="mainContent">
+
       <div id="firstRow">
         <p class="header">PSTN</p>
-        <div id="PSTN">
-          <div class="trunk"
-            ng-repeat="trunk in data.gw.trunkGroups"
-            draw-lines
-            data="trunk"
-            >
-            <label>{{trunk.label1}}</label>
-            <label>{{trunk.label2}}</label>
-          </div>
-        </div>
-      </div>
-      <div id="middle">
-        <div class="physPorts">
-          <p>Trunks & Ports</p>
-          <label ng-repeat="port in data.gw.physPorts"
-            class="circle"
-            id="{{port.id}}"
-            data-count="{{port.count}}"
-            ng-class="{count: port.count}">
-            {{port.label}}
-          </label>
 
-        </div>
-        <div class="row">
-          <div class="GW-links">
-            <h3>GW</h3>
-            <a href="">Number Manipulation</a>
-            <a href="">Routing</a>
-            <a href="">DTMF & Daiiling</a>
-            <a href="">Supplementary Services</a>
-            <a href="">GW Settings</a>
-          </div>
-          <div class="SBC-links">
-            <h3>SBC</h3>
-            <a href="">Call Flow Explained</a>
-            <a href="">Classifications</a>
-            <a href="">Number Manipulation</a>
-            <a href="">Routing <span class="invalid"></span></a>
-            <a href="">SBC Settings <span class="invalid"></span></a>
-          </div>
-        </div>
-        <div class="row SIP-Realm">
-          <div class="SIP" id="1">
-            <label>SIP Interface</label>
-            <label>#1 [GW LAN]</label>
-          </div>
-          <a class="link-plus">+</a>
+        <div id="TRUNKS-IPGROUPS">
+          <div id="TRUNKS">
+            <div class="trunk"
+                 ng-repeat="trunk in data.gw.trunkGroups"
+                 draw-lines
+                 type="trunk"
+                 data="trunk"
+                    >
+              <label>{{trunk.label1}}</label>
+              <label>{{trunk.label2}}</label>
 
-          <div class="inside-SBC">
-            <div class="SIP" id="2">
-              <label>SIP Interface</label>
-              <label>#1 [GW LAN]</label>
-            </div>
-            <div class="SIP" id="3">
-              <label>SIP Interface</label>
-              <label>#1 [GW LAN]</label>
+              <div class="trunkMenu menu">
+                <p><a href="">TRUNK GROUP LIST</a></p>
+                <p><a href="">VIEW DETAILS</a></p>
+                <hr/>
+                <p><a href="">DELETE</a></p>
+              </div>
             </div>
             <a class="link-plus">+</a>
           </div>
 
-          <div class="Realm-wrap">
-            <div class="Realm" id="4">
-              <label>Realm</label>
-              <label>#1 [LAN1]</label>
+          <div id="IPGROUPUP">
+            <div class="ip"
+                 ng-repeat="ip in data.ipGroupsUp | limitTo:2"
+                 ng-repeat="ip in data.ipGroupsDown"
+                 draw-lines
+                 data="ip">
+              <label>{{ip.label1}}</label>
+              <label>{{ip.label2}} <span ng-class="ip.status"></span></label>
             </div>
-             <div class="Realm" id="5">
-              <label>Realm</label>
-              <label>#2 [LAN2]</label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mainBox">
+
+        <section id="GWSection">
+
+          <div class="SIPUP">
+            <div class="moreItems" data-count="{{data.gw.gwSipsUp.length}}" ng-class="{count: true}">
+              <p>SIP INTERFACES</p>
+              <p class="doubleRectangle"></p>
             </div>
-               <a class="link-plus">+</a>
+            <a class="link-plus">+</a>
+          </div>
+
+          <div id="trunksPorts">
+
+            <p>Trunks & Ports</p>
+            <div class="wrapTrunkPort circle" ng-repeat="port in data.gw.physPorts"
+                 id="{{port.id}}"
+                 ng-class="{count: port.count}"
+                 data-count="{{port.count}}">
+              <label>
+                {{port.label}}
+              </label>
+              <span ng-if="port.count" class="doubleCircle"></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="GW-links">
+              <h3>GW</h3>
+              <a href="">Number Manipulation</a>
+              <a href="">Routing</a>
+              <a href="">DTMF & Daiiling</a>
+              <a href="">Supplementary Services</a>
+              <a href="">GW Settings</a>
+            </div>
+          </div>
+
+          <div class="SIPDOWN">
+            <div class="SIP" id="{{sip.id}}" ng-repeat="sip in data.gw.gwSipsDown | limitTo:1">
+              <label>{{sip.label1}}</label>
+              <label>{{sip.label2}}</label>
+            </div>
+            <a class="link-plus">+</a>
+          </div>
+
+
+        </section>
+
+        <section id="SBCSection">
+
+          <div class="row">
+            <div class="SBC-links">
+              <h3>SBC</h3>
+              <a href="">Call Flow Explained</a>
+              <a href="">Classifications</a>
+              <a href="">Number Manipulation</a>
+              <a href="">Routing <span class="invalid"></span></a>
+              <a href="">SBC Settings <span class="invalid"></span></a>
+            </div>
+          </div>
+
+          <div class="SIPUP">
+            <div class="SIP" id="{{sip.id}}" ng-repeat="sip in data.sbc.sbcSipsUp | limitTo:1">
+              <label>{{sip.label1}}</label>
+              <label>{{sip.label2}}</label>
+            </div>
+            <a class="link-plus">+</a>
+          </div>
+
+          <div class="SIPDOWN">
+            <div class="SIP" id="{{sip.id}}" ng-repeat="sip in data.sbc.sbcSipsDown | limitTo:2">
+              <label>{{sip.label1}}</label>
+              <label>{{sip.label2}}</label>
+            </div>
+            <a class="link-plus">+</a>
+          </div>
+        </section>
+
+        <section id="REALMSection">
+
+          <div class="REALMUP">
+            <div class="Realm" id="{{realm.id}}" ng-repeat="realm in data.realms.realmsUp">
+              <label>{{realm.label1}}</label>
+              <label>{{realm.label2}}</label>
+            </div>
+            <a class="link-plus">+</a>
+          </div>
+
+          <div class="REALMDOWN">
+            <div class="Realm" id="{{realm.id}}" ng-repeat="realm in data.realms.realmsDown">
+              <label>{{realm.label1}}</label>
+              <label>{{realm.label2}}</label>
+            </div>
+            <a class="link-plus">+</a>
+          </div>
+
+        </section>
+
+      </div>
+
+      <div class="row IPGroup">
+        <div class="ip"
+             ng-repeat="ip in data.ipGroupsDown | limitTo:6"
+             draw-lines
+             reverse="true"
+             data="ip">
+          <label>{{ip.label1}}</label>
+          <label>{{ip.label2}} <span ng-class="ip.status"></span></label>
+        </div>
+        <div ng-if="data.ipGroupsDown.length > 6" class="moreItems count" id="moreIPS"
+             data-count="{{getIPDownCount(data.ipGroupsDown.length)}}" show-more>
+          <p>IP Groups <label>{{getIPDownCount(data.ipGroupsDown.length)}} more...</label></p>
+          <p class="doubleRectangle"></p>
+          <div class="ipGroupsArrow"></div>
+
+          <div class="group">
+
+            <div class="ip"
+                 ng-repeat="ip in data.ipGroupsDown.slice(6)"
+                 draw-lines
+                 group="true"
+                 type="ip"
+                 reverse="true"
+                 data="ip">
+              <label>{{ip.label1}}</label>
+              <label>{{ip.label2}} <span ng-class="ip.status"></span></label>
+            </div>
+
+
           </div>
 
         </div>
+        <a class="link-plus">+</a>
 
-        <div class="row IPGroup">
-            <div class="ip"
-            ng-repeat="ip in data.ipGroupsDown"
-            draw-lines
-            reverse="true"
-            data="ip">
-              <label>{{ip.label1}}</label>
-              <label>{{ip.label2}}</label>
-            </div>
-        </div>
       </div>
+
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>

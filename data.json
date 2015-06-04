@@ -1,251 +1,371 @@
 {
-   "gw":{
-      "trunkGroups":[
-         {
-            "id":123,
-            "ind":3,
-            "label1":"Trunk Group",
-            "label2":"#1",
-            "connectedTo":[
-               {
-                  "id":111,
-                  "type":"solid/dashed"
-               }
-            ]
-         },
-          {
-            "id":124,
-            "ind":3,
-            "label1":"Trunk Group",
-            "label2":"#2",
-            "connectedTo":[
-               {
-                  "id":112,
-                  "type":"solid/dashed"
-               }
-            ]
-         },
-              {
-            "id":124,
-            "ind":3,
-            "label1":"Trunk Group",
-            "label2":"#3",
-            "connectedTo":[
-               {
-                  "id":113,
-                  "type":"solid/dashed"
-               }
-            ]
-         },
-              {
-            "id":124,
-            "ind":3,
-            "label1":"Trunk Group",
-            "label2":"#4",
-            "connectedTo":[
-               {
-                  "id":114,
-                  "type":"solid/dashed"
-               }
-            ]
-         }
-      ],
-      "physPorts":[
-         {
-            "id":111,
-            "type":"E1/T1",
-            "label":"BRI",
-            "count":2,
-            "cmds":[
-               {
-                  "label":"Tel List",
-                  "href":"/goTelList"
-               }
-            ]
-         },
-           {
-            "id":112,
-            "type":"BRI",
-            "label":"E1/T1",
-            "count":2,
-            "cmds":[
-               {
-                  "label":"Tel List",
-                  "href":"/goTelList"
-               }
-            ]
-         },
-            {
-            "id":113,
-            "type":"BRI",
-            "count":0,
-            "label":"FXO 1",
-            "cmds":[
-               {
-                  "label":"Tel List",
-                  "href":"/goTelList"
-               }
-            ]
-         },
-            {
-            "id":114,
-            "type":"BRI",
-            "label":"FXO 2",
-            "count":0,
-            "cmds":[
-               {
-                  "label":"Tel List",
-                  "href":"/goTelList"
-               }
-            ]
-         }
-
-      ],
-      "cmds":[
-         {
-            "label":"NUmber Manipulation",
-            "href":"/goTelList",
-            "type":"link | sep | help",
-            "status":{
-               "type":"invalid | invalidRef | conected | disconnected",
-               "tooltip":"bla"
-            }
-         }
-      ]
-   },
-   "ipGroupsDown":[
+  "gw": {
+    "trunkGroups": [
       {
-         "id":1001,
-         "label1":"IP Group [Server]",
-         "label2":"#1 [COMSEC]",
-         "status":{
-
-         },
-         "info":"connected to bla",
-         "srd":{
-            "id":111,
-            "name":"IBM-IL"
-         },
-         "connectedTo":[
-            {
-               "id":4,
-               "type":"solid/dashed"
-            }
-         ]
+        "id": 123,
+        "ind": 3,
+        "label1": "Trunk Group",
+        "label2": "#1",
+        "connectedTo": [
+          {
+            "id": 111,
+            "type": "dashed"
+          }
+        ]
       },
-           {
-         "id":1001,
-         "label1":"IP Group [Server]",
-         "label2":"#2 [COMSEC]",
-         "status":{
-
-         },
-         "info":"connected to bla",
-         "srd":{
-            "id":111,
-            "name":"IBM-IL"
-         },
-         "connectedTo":[
-            {
-               "id":3,
-               "type":"solid/dashed"
-            }
-         ]
+      {
+        "id": 124,
+        "ind": 3,
+        "label1": "Trunk Group",
+        "label2": "#2",
+        "connectedTo": [
+          {
+            "id": 112,
+            "type": "solid/dashed"
+          }
+        ]
       },
-           {
-         "id":1001,
-         "label1":"IP Group [Server]",
-         "label2":"#3 [COMSEC]",
-         "status":{
-
-         },
-         "info":"connected to bla",
-         "srd":{
-            "id":111,
-            "name":"IBM-IL"
-         },
-         "connectedTo":[
-            {
-               "id":5,
-               "type":"solid/dashed"
-            }
-         ]
+      {
+        "id": 124,
+        "ind": 3,
+        "label1": "Trunk Group",
+        "label2": "#3",
+        "connectedTo": [
+          {
+            "id": 113,
+            "type": "dashed"
+          }
+        ]
       },
-              {
-         "id":1001,
-         "label1":"IP Group [Server]",
-         "label2":"#3 [COMSEC]",
-         "status":{
-
-         },
-         "info":"connected to bla",
-         "srd":{
-            "id":4,
-            "name":"IBM-IL"
-         },
-         "connectedTo":[
-            {
-               "id":1,
-               "type":"solid/dashed"
-            }
-         ]
-      },
-              {
-         "id":1001,
-         "label1":"IP Group [Server]",
-         "label2":"#3 [COMSEC]",
-         "status":{
-
-         },
-         "info":"connected to bla",
-         "srd":{
-            "id":111,
-            "name":"IBM-IL"
-         },
-         "connectedTo":[
-            {
-               "id":3,
-               "type":"solid/dashed"
-            }
-         ]
-      },
-              {
-         "id":1001,
-         "label1":"IP Group [Server]",
-         "label2":"#3 [COMSEC]",
-         "status":{
-
-         },
-         "info":"connected to bla",
-         "srd":{
-            "id":111,
-            "name":"IBM-IL"
-         },
-         "connectedTo":[
-            {
-               "id":2,
-               "type":"solid/dashed"
-            }
-         ]
-      },
-              {
-         "id":1001,
-         "label1":"IP Group [Server]",
-         "label2":"#3 [COMSEC]",
-         "status":{
-
-         },
-         "info":"connected to bla",
-         "srd":{
-            "id":111,
-            "name":"IBM-IL"
-         },
-         "connectedTo":[
-            {
-               "id":1,
-               "type":"solid/dashed"
-            }
-         ]
+      {
+        "id": 124,
+        "ind": 3,
+        "label1": "Trunk Group",
+        "label2": "#4",
+        "connectedTo": [
+          {
+            "id": 114,
+            "type": "solid/dashed"
+          }
+        ]
       }
-   ]
+    ],
+    "physPorts": [
+      {
+        "id": 111,
+        "type": "E1/T1",
+        "label": "BRI",
+        "count": 2
+      },
+      {
+        "id": 112,
+        "type": "BRI",
+        "label": "E1/T1",
+        "count": 2
+      },
+      {
+        "id": 113,
+        "type": "BRI",
+        "count": 0,
+        "label": "FXO 1"
+      },
+      {
+        "id": 114,
+        "type": "BRI",
+        "label": "FXO 2",
+        "count": 0
+      }
+    ],
+    "gwSipsDown": [
+      {
+        "id": 1,
+        "label1": "SIP Interface",
+        "label2": "#1 GW WAN",
+        "status": "invalid | invalidRef | conected | disconnected",
+        "statusTooltip": "Invalid SIP Interface",
+        "gwSipsUpSrd": {
+          "id": 111,
+          "name": "IBM-IL",
+          "label": "IP Interface 192.168.0.109:5070"
+        }
+      }
+    ],
+    "gwSipsUp": [
+      {
+        "id": 1,
+        "label1": "SIP Interface",
+        "label2": "#1 GW WAN",
+        "status": "invalid | invalidRef | conected | disconnected",
+        "statusTooltip": "Invalid SIP Interface",
+        "gwSipsUpSrd": {
+          "id": 111,
+          "name": "IBM-IL",
+          "label": "IP Interface 192.168.0.109:5070"
+        }
+      }
+    ],
+    "cmds": [
+      {
+        "label": "NUmber Manipulation",
+        "href": "/goTelList",
+        "type": "link | sep | help",
+        "status": {
+          "type": "invalid | invalidRef | conected | disconnected",
+          "tooltip": "bla"
+        }
+      }
+    ]
+  },
+  "sbc": {
+    "sbcSipsDown": [
+      {
+        "id": 2,
+        "label1": "SIP Interface",
+        "label2": "#1 GW WAN",
+        "status": "invalid | invalidRef | conected | disconnected",
+        "statusTooltip": "Invalid SIP Interface",
+        "gwSipsUpSrd": {
+          "id": 111,
+          "name": "IBM-IL",
+          "label": "IP Interface 192.168.0.109:5070"
+        }
+      },
+      {
+        "id": 3,
+        "label1": "SIP Interface",
+        "label2": "#1 GW WAN",
+        "status": "invalid | invalidRef | conected | disconnected",
+        "statusTooltip": "Invalid SIP Interface",
+        "gwSipsUpSrd": {
+          "id": 111,
+          "name": "IBM-IL",
+          "label": "IP Interface 192.168.0.109:5070"
+        }
+      }
+    ],
+    "sbcSipsUp": [
+      {
+        "id": 100,
+        "label1": "SIP Interface",
+        "label2": "#1 GW WAN",
+        "status": "invalid | invalidRef | conected | disconnected",
+        "statusTooltip": "Invalid SIP Interface",
+        "gwSipsUpSrd": {
+          "id": 111,
+          "name": "IBM-IL",
+          "label": "IP Interface 192.168.0.109:5070"
+        }
+      }
+    ]
+  },
+  "realms": {
+    "realmsUp": [
+      {
+        "id": 101,
+        "label1": "Media Realm",
+        "label2": "#1 [WAN]",
+        "status": "valid | invalid",
+        "statusTooltip": "Invalid Realm"
+      }
+    ],
+    "realmsDown": [
+      {
+        "id": 4,
+        "label1": "Realm",
+        "label2": "#1 [WAN]",
+        "status": "valid | invalid",
+        "statusTooltip": "Invalid Realm"
+      },
+      {
+        "id": 5,
+        "label1": "Realm",
+        "label2": "#1 [WAN]",
+        "status": "valid | invalid",
+        "statusTooltip": "Invalid Realm"
+      }
+    ]
+  },
+  "ipGroupsDown": [
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#1 [COMSEC]",
+      "status": {
+      },
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 4,
+          "type": "solid/dashed"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#2 [COMSEC]",
+      "status": {
+      },
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 3,
+          "type": "solid/dashed"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#3 [COMSEC]",
+      "status": "invalidRef",
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 5,
+          "type": "solid/dashed"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#3 [COMSEC]",
+      "status": {
+      },
+      "info": "connected to bla",
+      "srd": {
+        "id": 4,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 1,
+          "type": "solid/dashed"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#3 [COMSEC]",
+      "status": {
+      },
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 3,
+          "type": "dashed"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#3 [COMSEC]",
+      "status": {
+      },
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 2,
+          "type": "solid/dashed"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#3 [COMSEC]",
+      "status": "disconnected",
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 1,
+          "type": "dashed"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#3 [COMSEC]",
+      "status": "connected",
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 4,
+          "type": "solid"
+        }
+      ]
+    }
+  ],
+  "ipGroupsUp": [
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#2 [COMSEC]",
+      "status": "disconnected",
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 100,
+          "type": "dashed"
+        },
+        {
+          "id": 101,
+          "type": "solid"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "label1": "IP Group [Server]",
+      "label2": "#1 [COMSEC]",
+      "status": "connected",
+      "info": "connected to bla",
+      "srd": {
+        "id": 111,
+        "name": "IBM-IL"
+      },
+      "connectedTo": [
+        {
+          "id": 10143443,
+          "type": "solid"
+        }
+      ]
+    }
+  ]
 }

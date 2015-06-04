@@ -428,9 +428,11 @@ ul {
 }
 .roundRectBase,
 .trunk,
+.moreItems p:first-child,
 .SIP,
 .Realm,
-.ip {
+.ip,
+#IPGROUPUP .ip {
   border-radius: 3px;
   background-color: #fff;
   border: solid 2px #499de0;
@@ -449,17 +451,20 @@ ul {
   z-index: 1;
   line-height: 1.2;
   font-size: 10px;
-  top: -3px;
-  right: -4px;
+  top: 0px;
+  right: -3px;
 }
 .trunk {
+  position: relative;
   border-color: #499de0;
-  width: 80px;
+  width: 17%;
   height: 37px;
+  cursor: pointer;
   padding: 2px;
 }
 .trunk label {
   display: block;
+  cursor: pointer;
 }
 .trunk label:first-child {
   color: #9A9FA5;
@@ -470,13 +475,127 @@ ul {
   color: #3d4c5a;
   font-size: 12px;
 }
+.trunk ~ .link-plus {
+  width: 24px;
+  line-height: 37px;
+  height: 37px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #499de0;
+  background-color: #fff;
+  border: solid 2px rgba(73, 157, 224, 0.35);
+}
+.moreItems {
+  position: relative;
+}
+.moreItems.count::after {
+  top: -5px;
+  right: -5px;
+}
+.moreItems p:first-child {
+  border-color: #499de0;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px 0 10px;
+  z-index: 1;
+  color: #9A9FA5;
+  font-style: italic;
+  font-size: 11px;
+}
+.moreItems p:first-child label {
+  display: block;
+  cursor: pointer;
+}
+.moreItems p:first-child label:first-child {
+  color: #9A9FA5;
+  font-style: italic;
+  font-size: 11px;
+}
+.moreItems p:first-child label:last-child {
+  color: #3d4c5a;
+  font-size: 12px;
+}
+.moreItems ~ .link-plus {
+  width: 23px;
+  line-height: 43px;
+  height: 43px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #499de0;
+  background-color: #fff;
+  border: solid 2px rgba(73, 157, 224, 0.35);
+  margin-left: 7px;
+}
+.IPGroup .moreItems p:first-child {
+  padding: 3px 20px 0px 20px;
+}
+.group {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 125%;
+  z-index: 100;
+  height: 320px;
+  overflow-y: auto;
+  width: 135%;
+  left: -20%;
+  padding: 5px;
+  background: #ffffff;
+  border: 1px solid #9CA5B3;
+  display: none;
+}
+.group .ip {
+  width: 100%;
+}
+.group .ip:not(:first-child) {
+  margin-top: 6px;
+}
+.ipGroupsArrow {
+  position: relative;
+  top: -52px;
+  background: #fff;
+  z-index: 100000;
+  display: none;
+}
+.ipGroupsArrow:after,
+.ipGroupsArrow:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.ipGroupsArrow:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.ipGroupsArrow:before {
+  border-color: rgba(156, 165, 179, 0);
+  border-top-color: #9ca5b3;
+  border-width: 11px;
+  margin-left: -11px;
+}
 .SIP {
   border-color: #499de0;
-  width: 96px;
+  width: 25%;
   height: 40px;
+  cursor: pointer;
 }
 .SIP label {
   display: block;
+  cursor: pointer;
 }
 .SIP label:first-child {
   color: #9A9FA5;
@@ -488,7 +607,7 @@ ul {
   font-size: 12px;
 }
 .SIP ~ .link-plus {
-  width: 20px;
+  width: 23px;
   line-height: 40px;
   height: 40px;
   cursor: pointer;
@@ -502,11 +621,14 @@ ul {
 }
 .Realm {
   border-color: #9980c5;
-  width: 67px;
+  width: 35%;
   height: 40px;
+  cursor: pointer;
+  padding-top: 2px;
 }
 .Realm label {
   display: block;
+  cursor: pointer;
 }
 .Realm label:first-child {
   color: #9A9FA5;
@@ -518,7 +640,7 @@ ul {
   font-size: 12px;
 }
 .Realm ~ .link-plus {
-  width: 20px;
+  width: 23px;
   line-height: 40px;
   height: 40px;
   cursor: pointer;
@@ -530,14 +652,23 @@ ul {
   background-color: #fff;
   border: solid 2px rgba(163, 139, 204, 0.35);
 }
+.Realm label:first-child {
+  font-size: 10px;
+}
+.Realm label:last-child {
+  font-size: 11px;
+}
 .ip {
+  position: relative;
   border-color: #499de0;
-  width: 105px;
+  width: 12%;
   height: 40px;
+  cursor: pointer;
   margin-right: 7px;
 }
 .ip label {
   display: block;
+  cursor: pointer;
 }
 .ip label:first-child {
   color: #9A9FA5;
@@ -548,9 +679,28 @@ ul {
   color: #3d4c5a;
   font-size: 12px;
 }
+.ip ~ .link-plus {
+  width: 23px;
+  line-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #499de0;
+  background-color: #fff;
+  border: solid 2px rgba(73, 157, 224, 0.35);
+}
 .circle {
   position: relative;
+  margin-right: 10px;
   display: inline-block;
+}
+.circle label {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
   width: 37px;
   height: 37px;
   line-height: 33px;
@@ -559,7 +709,6 @@ ul {
   border: solid 2px #499de0;
   text-align: center;
   font-size: 11px;
-  margin-right: 5px;
 }
 .doubleCircle {
   position: absolute;
@@ -569,21 +718,56 @@ ul {
   width: 37px;
   height: 37px;
   content: '';
-  left: -2px;
-  top: -2px;
+  right: -4px;
+  top: 2px;
 }
-span.invalid::after {
+.doubleRectangle {
+  position: absolute;
+  border: solid 2px #499de0;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
   content: '';
+  right: -4px;
+  top: 3px;
+}
+/* ===============
+   ICONS INDICATORS
+   =============== */
+.icon-indicator,
+.connected::after,
+.disconnected::after,
+.invalid::after,
+.invalidRef {
   display: inline-block;
+  content: '';
   vertical-align: middle;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+.connected::after {
+  width: 12px;
+  height: 12px;
+  background: url('../img/connected.png') no-repeat;
+}
+.disconnected::after {
+  width: 14px;
+  height: 12px;
+  background: url('../img/disconnected.png') no-repeat;
+}
+.invalid::after {
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background-color: #ec008c;
   margin-left: 2px;
-  -webkit-transform: translateY(-1px);
-  -ms-transform: translateY(-1px);
-  transform: translateY(-1px);
+}
+.invalidRef {
+  background: url('../img/invalidRef.png') no-repeat;
+  width: 16px;
+  height: 8px;
 }
 .row::before,
 .row::after {
@@ -599,11 +783,29 @@ body {
   overflow-x: hidden;
   margin: 50px;
 }
+#firstRow {
+  width: 95%;
+  margin: 0 auto;
+}
 .mainContent {
-  width: 1080px;
+  width: 90%;
   height: 478px;
+  position: relative;
   border: 1px solid #C9CED3;
-  background: url('../img/bg.png') no-repeat;
+  overflow: hidden;
+}
+.mainContent::before {
+  content: '';
+  background: #F5FDFE;
+  height: 100%;
+  width: 135%;
+  -webkit-transform: rotate(110deg);
+  -ms-transform: rotate(110deg);
+  transform: rotate(110deg);
+  position: absolute;
+  left: -50%;
+  z-index: -1;
+  top: -208px;
 }
 .header {
   color: #c6d0e4;
@@ -623,39 +825,26 @@ body {
   margin-top: 2px;
   cursor: pointer;
 }
-#PSTN {
+#TRUNKS-IPGROUPS {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#TRUNKS {
   margin-left: 10px;
   margin-top: 7px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-#middle {
-  width: 100%px;
-  height: 201px;
-  background: url('../img/bgmiddle.png') no-repeat;
-  background-position: 50%;
-  margin-top: 70px;
-}
-.physPorts {
-  width: 232px;
-  display: inline-block;
-  margin-left: 110px;
-  margin-top: 12px;
-}
-.physPorts p {
-  display: inline-block;
-  color: #ADBABF;
-  font-size: 10px;
-  width: 40px;
-  vertical-align: middle;
+  width: 100%;
 }
 .GW-links,
 .SBC-links {
   width: 370px;
-  margin-left: 125px;
-  margin-top: 15px;
+  margin-top: 2px;
+  margin-left: 25px;
   float: left;
   position: relative;
 }
@@ -691,8 +880,7 @@ body {
   padding-top: 3px;
 }
 .SBC-links {
-  margin-left: 20px;
-  margin-top: -13px;
+  margin-top: 30px;
 }
 .SBC-links h3 {
   left: 53%;
@@ -718,40 +906,183 @@ body {
 .SBC-links a:nth-child(6) {
   padding-top: 3px;
 }
-.SIP-Realm {
-  margin-left: 310px;
-  -webkit-transform: translateY(-15px);
-  -ms-transform: translateY(-15px);
-  transform: translateY(-15px);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.SIP-Realm .inside-SBC {
-  display: inline-block;
-  -webkit-transform: translateX(130px);
-  -ms-transform: translateX(130px);
-  transform: translateX(130px);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.Realm-wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: translateX(155px);
-  -ms-transform: translateX(155px);
-  transform: translateX(155px);
-}
 .IPGroup {
-  margin-left: 100px;
-  margin-top: 40px;
+  width: 90%;
+  margin: 330px auto auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+.mainBox {
+  width: 90%;
+  margin: 0 auto;
+  height: 200px;
+  border: 3px solid #B6E0FF;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#GWSection,
+#SBCSection {
+  border-right: 3px solid #B6E0FF;
+  background: #EFFCFE;
+  position: relative;
+}
+#GWSection {
+  width: 50%;
+  height: 100%;
+}
+#GWSection #trunksPorts {
+  position: relative;
+  padding: 11px;
+  width: 56%;
+  height: 60px;
+  border-bottom: 3px solid #B6E0FF;
+  border-bottom-right-radius: 7px;
+}
+#GWSection #trunksPorts::after {
+  content: '';
+  width: 3px;
+  height: 130%;
+  background: #B6E0FF;
+  position: absolute;
+  right: -19.2px;
+  bottom: -8px;
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+#GWSection #trunksPorts p {
+  display: inline-block;
+  color: #ADBABF;
+  font-size: 10px;
+  width: 40px;
+  vertical-align: middle;
+}
+#GWSection .SIPDOWN .SIP {
+  margin-left: 12em;
+}
+#GWSection .SIPUP {
+  left: 66%;
+}
+.SIPDOWN,
+.REALMDOWN,
+.REALMUP,
+#SBCSection .SIPUP {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -23px;
+}
+.SIPUP {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+}
+#IPGROUPUP {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-left: 100px;
+  margin-top: 7px;
+}
+#IPGROUPUP .ip {
+  border-color: #499de0;
+  width: 26%;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 7px;
+}
+#IPGROUPUP .ip label {
+  display: block;
+  cursor: pointer;
+}
+#IPGROUPUP .ip label:first-child {
+  color: #9A9FA5;
+  font-style: italic;
+  font-size: 11px;
+}
+#IPGROUPUP .ip label:last-child {
+  color: #3d4c5a;
+  font-size: 12px;
+}
+.SIPUP,
+.REALMUP {
+  top: -23px;
+}
+#SBCSection {
+  width: 30%;
+  height: 100%;
+}
+#SBCSection .SIP {
+  width: 35%;
+}
+#REALMSection {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background: #F9F9FD;
+}
+#REALMSection .REALMDOWN {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -23px;
+}
+.selected {
+  background: #E8F5FA !important;
+}
+#TRUNKS .trunkMenu {
+  position: absolute;
+  left: 100%;
+  top: 60%;
+  border: 1px solid #9CA5B3;
+  padding: 10px;
+  background: #FFF;
+  z-index: 2000;
+  width: 150px;
+  text-align: left;
+  display: none;
+}
+#TRUNKS .trunkMenu hr {
+  margin-bottom: 5px;
+}
+#TRUNKS .trunkMenu a {
+  display: block;
+  padding-bottom: 10px;
+  color: #64707B;
+  font-size: 12px;
+}
+.show {
+  display: block !important;
 }

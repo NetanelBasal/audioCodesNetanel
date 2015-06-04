@@ -4,26 +4,41 @@
 @import 'mixins';
 @import 'helpers';
 
-
-body{
+body {
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
-  overflow-x:hidden;
-  margin:50px;
+  overflow-x: hidden;
+  margin: 50px;
 }
 
+#firstRow {
+  width: 95%;
+  margin: 0 auto;
+}
 
 .mainContent {
-  width: 1080px;
-  height:478px;
+  width: 90%;
+  height: 478px;
+  position: relative;
   border: 1px solid #C9CED3;
-  background: url('../img/bg.png') no-repeat;
+  overflow: hidden;
+  &::before {
+    content: '';
+    background: #F5FDFE;
+    height: 100%;
+    width: 135%;
+    transform: rotate(110deg);
+    position: absolute;
+    left: -50%;
+    z-index: -1;
+    top: -208px;
+  }
 }
 
 .header {
-  color:#c6d0e4;
+  color: #c6d0e4;
   font-size: 18px;
-  width:387px;
+  width: 387px;
   text-align: center;
   padding-top: 5px;
   &::after {
@@ -39,77 +54,58 @@ body{
   }
 }
 
-#PSTN {
-  margin-left: 10px;
-  margin-top: 7px;
+#TRUNKS-IPGROUPS {
   display: flex;
 }
 
-#middle {
-  width:100%px;
-  height:201px;
-  background: url('../img/bgmiddle.png') no-repeat;
-  background-position: 50%;
-  margin-top: 70px;
+#TRUNKS {
+  margin-left: 10px;
+  margin-top: 7px;
+  display: flex;
+  width:100%;
 }
-
-.physPorts {
-  width:232px;
-  display: inline-block;
-  margin-left: 110px;
-  margin-top: 12px;
-  p {
-    display: inline-block;
-    color:#ADBABF;
-    font-size: 10px;
-    width: 40px;
-    vertical-align: middle;
-  }
-}
-
-
 
 .GW-links, .SBC-links {
-  width:370px;
-  margin-left: 125px;
-  margin-top: 15px;
-  float:left;
-  position:relative;
+  width: 370px;
+  margin-top: 2px;
+  margin-left: 25px;
+  float: left;
+  position: relative;
   h3 {
     font-size: 24px;
-    color:#48617E;
-    position:absolute;
+    color: #48617E;
+    position: absolute;
     top: 13%;
-  left: 75%;
-  font-weight: normal;
+    left: 75%;
+    font-weight: normal;
   }
   a {
     display: block;
     font-size: 11px;
     line-height: 2.2em;
     color: @link;
-    width:136px;
-    position:relative;
+    width: 136px;
+    position: relative;
     &::after {
       content: '>';
       position: absolute;
-      right:0;
+      right: 0;
     }
   }
 }
+
 .GW-links {
   a:nth-child(3) {
-      border-bottom: 1px solid #cae0ec;
-      padding-bottom: 3px;
-    }
-    a:nth-child(4) {
-      padding-top: 3px;
-    }
+    border-bottom: 1px solid #cae0ec;
+    padding-bottom: 3px;
+  }
+  a:nth-child(4) {
+    padding-top: 3px;
+  }
 }
 
 .SBC-links {
-  margin-left: 20px;
-  margin-top: -13px;
+  margin-top: 30px;
   h3 {
     left: 53%;
     top: 35%;
@@ -117,42 +113,178 @@ body{
   a {
     width: 138px;
   }
-a:nth-child(2)::before {
-  content:'';
-  background: url('../img/questcircle.png') no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width:17px;
-  height:17px;
-  margin-right: 5px;
-}
-    a:nth-child(5),   a:nth-child(2){
-      border-bottom: 1px solid #cae0ec;
-      padding-bottom: 3px;
-    }
-    a:nth-child(6) {
-      padding-top: 3px;
-    }
-}
-
-.SIP-Realm {
-    margin-left: 310px;
-    transform: translateY(-15px);
-    display: flex;
-    .inside-SBC {
-      display: inline-block;
-      transform: translateX(130px);
-      display: flex;
-    }
+  a:nth-child(2)::before {
+    content: '';
+    background: url('../img/questcircle.png') no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+  }
+  a:nth-child(5), a:nth-child(2) {
+    border-bottom: 1px solid #cae0ec;
+    padding-bottom: 3px;
+  }
+  a:nth-child(6) {
+    padding-top: 3px;
+  }
 }
 
-.Realm-wrap {
-  display: flex;
-  transform: translateX(155px);
-}
 
 .IPGroup {
-  margin-left: 100px;
-  margin-top: 40px;
+  width:90%;
+  margin: 330px auto auto;
   display: flex;
+}
+
+
+.mainBox {
+  width: 90%;
+  margin: 0 auto;
+  height: 200px;
+  border: 3px solid #B6E0FF;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+#GWSection, #SBCSection {
+  border-right: 3px solid #B6E0FF;
+  background: #EFFCFE;
+  position: relative;
+}
+
+#GWSection {
+  width: 50%;
+  height: 100%;
+  #trunksPorts {
+    position: relative;
+    padding: 11px;
+    width: 56%;
+    height: 60px;
+    border-bottom: 3px solid #B6E0FF;
+    border-bottom-right-radius: 7px;
+    &::after {
+      content: '';
+      width: 3px;
+      height: 130%;
+      background: #B6E0FF;
+      position: absolute;
+      right: -19.2px;
+      bottom: -8px;
+      transform: rotate(36deg);
+    }
+    p {
+      display: inline-block;
+      color: #ADBABF;
+      font-size: 10px;
+      width: 40px;
+      vertical-align: middle;
+    }
+  }
+
+  .SIPDOWN {
+    .SIP {
+      margin-left: 12em;
+    }
+  }
+
+  .SIPUP {
+    left: 66%;
+  }
+}
+
+.SIPDOWN, .REALMDOWN, .REALMUP, #SBCSection .SIPUP {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -23px;
+}
+
+.SIPUP {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  right: 0;
+}
+
+#IPGROUPUP {
+  display: flex;
+  width: 100%;
+  margin-left: 100px;
+  margin-top: 7px;
+  .ip {
+    &:extend(.roundRectBase);
+    .roundRect(26%, 40px);
+    margin-right: 7px;
+  }
+
+}
+
+.SIPUP, .REALMUP {
+  top: -23px;
+}
+
+#SBCSection {
+  width: 30%;
+  height: 100%;
+  .SIP {
+    width: 35%;
+  }
+}
+
+#REALMSection {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background: #F9F9FD;
+  .REALMDOWN {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -23px;
+  }
+}
+
+.selected {
+  background: #E8F5FA !important;
+}
+
+
+#TRUNKS .trunkMenu {
+  position: absolute;
+  left: 100%;
+  top: 60%;
+  border: 1px solid #9CA5B3;
+  padding: 10px;
+  background: #FFF;
+  z-index: 2000;
+  width: 150px;
+  text-align: left;
+  display: none;
+  hr {
+    margin-bottom: 5px;
+  }
+    
+  a {
+    display: block;
+    padding-bottom:10px;
+    color:#64707B;
+    font-size: 12px;
+  }
+  
+}
+
+
+.show {
+  display: block !important;
 }
