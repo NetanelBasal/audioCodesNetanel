@@ -60,7 +60,8 @@
               $(el[0]).on('click', function() {
                 $('.selected').removeClass('selected');
                 $(this).toggleClass('selected');
-                var menu = $(this).find('.' + type + 'Menu');
+                $('.group').hide();
+                var menu = $(this).find('.menu');
                 if( menu.hasClass('show') ) {
                   $('.selected').removeClass('selected');
                   menu.removeClass('show');
@@ -114,6 +115,7 @@
         });
 
         el.on("click", function() {
+          $('.menu').removeClass('show');
           $(this).find('p').toggleClass('selected');
           $(this).find('.ipGroupsArrow').toggle();
           $(this).find('.group').toggle();
