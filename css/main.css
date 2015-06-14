@@ -777,6 +777,222 @@ ul {
 .row::after {
   clear: both;
 }
+.tooltipster-Invalid {
+  border-radius: 0px;
+  border: 1px solid #EF40A5;
+  background: #FDE6F3;
+  color: #666666;
+}
+.tooltipster-Invalid .tooltipster-content {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+}
+.tooltipster-info {
+  border-radius: 0px;
+  border: 1px solid #D3C399;
+  background: #FFFBC9;
+  color: #666666;
+}
+.tooltipster-info .tooltipster-content {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+}
+.tooltipster-srd {
+  border-radius: 0px;
+  border: 1px solid #475561;
+  background: #475561;
+  color: #E2E3E5;
+}
+.tooltipster-srd .tooltipster-content {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+}
+.tooltipster-srd .tooltipster-content span {
+  display: inline-block;
+  text-align: center;
+}
+.tooltipster-srd .tooltipster-content p {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px solid #B0B6BB;
+}
+.sqaureBase::before {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  vertical-align: middle;
+  display: inline-block;
+  content: '';
+}
+.green-square::before {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  vertical-align: middle;
+  display: inline-block;
+  content: '';
+}
+.green-square::before {
+  background: #A6CC90;
+}
+.silver-square::before {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  vertical-align: middle;
+  display: inline-block;
+  content: '';
+}
+.silver-square::before {
+  background: #C6C6C6;
+  border: 1px dashed #fff;
+}
+.ipnetwork {
+  width: 90%;
+  height: 478px;
+  position: relative;
+  border: 1px solid #C9CED3;
+  overflow: hidden;
+  padding: 50px 10px 20px 10px;
+}
+.ipnetwork-title {
+  font-size: 18px;
+  color: #626C76;
+}
+.ipnetwork-title ~ p a {
+  color: #5B8BD3;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.ipnetwork-title ~ p a::before {
+  content: '+';
+  border: 2px solid #B9D9F2;
+  border-radius: 4px;
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  line-height: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #388ED9;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ipnetwork-line {
+  margin-bottom: 1em;
+}
+.ipnetwork-line:not(:last-child) {
+  border-bottom: 1px solid #EFEFEF;
+}
+.physical-ports {
+  margin-top: 8em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.physical-ports .ipnetwork-title {
+  margin-right: 2em;
+}
+.physical-ports .wrap-port-group {
+  margin-right: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.physical-ports .wrap-port-group > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.physical-ports .wrap-port-group:first-of-type .lan-name {
+  border-bottom-left-radius: 6px;
+}
+.physical-ports .wrap-port-group:last-of-type .lan-name {
+  border-bottom-right-radius: 6px;
+}
+.physical-ports .lan-name {
+  position: absolute;
+  top: 104%;
+  background-color: #3A3A3A;
+  width: 100%;
+  color: #FFF;
+  text-align: center;
+  padding: 2px 0;
+}
+.physical-ports .physical-port {
+  width: 65px;
+  height: 72px;
+  color: #fff;
+  padding-top: 7px;
+  font-size: 12px;
+  text-align: center;
+  background: #008ae0;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+.ipnetwork-square {
+  border: 2px solid #539EE0;
+  border-radius: 5px;
+  padding: 15px 5px;
+  text-align: center;
+  font-size: 10px;
+  max-height: 55px;
+  height: 55px;
+}
+.ether-group {
+  display: inline-block;
+  margin-right: 1em;
+}
+.ether-group:first-of-type {
+  margin-left: 15em;
+}
+.ether-group .ipnetwork-square {
+  margin-top: 5px;
+}
+.wrap-categories {
+  margin-top: -160px;
+}
+.label-3-padding {
+  padding: 5px;
+}
+.group-name {
+  position: relative;
+  top: 120px;
+}
+.ip-interfaces {
+  position: relative;
+  top: -120px;
+}
+.ip-interfaces,
+.vlans {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ip-interfaces > div,
+.vlans > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
 body {
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
@@ -917,7 +1133,7 @@ body {
 .mainBox {
   width: 90%;
   margin: 0 auto;
-  height: 200px;
+  height: 220px;
   border: 3px solid #B6E0FF;
   border-radius: 7px;
   position: absolute;
@@ -967,9 +1183,6 @@ body {
   font-size: 10px;
   width: 40px;
   vertical-align: middle;
-}
-#GWSection .SIPDOWN .SIP {
-  margin-left: 12em;
 }
 #GWSection .SIPUP {
   left: 66%;
@@ -1085,4 +1298,11 @@ body {
 }
 .show {
   display: block !important;
+}
+.no-gw #SBCSection,
+.no-gw #REALMSection {
+  width: 50%;
+}
+.no-gw .IPGroup {
+  margin: 370px auto auto;
 }

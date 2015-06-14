@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>AudioCodes</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="libs/tooltipster.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="audioCodes" ng-controller="IPNetworkController" init-tooltips>
+    <div class="ipnetwork">
+      <div ng-repeat="ether in ipnetwork.ethernetGroups" class="ether-group">
+        <div class="ipnetwork-square group-name">{{ether.label1}}</div>
+        <div ng-repeat="vlan in ether.vlans">
+          <div class="vlans">
+            <div class="ipnetwork-square" ng-class="{'label-3-padding': vlan.label3}">
+              <p>{{vlan.label1}}</p>
+              <p>{{vlan.label2}}</p>
+              <p>{{vlan.label3}}</p>
+            </div>
+          </div>
+          <div class="ip-interfaces">
+            <div class="ipnetwork-square" ng-repeat="ip in vlan.ipInterfaces" ng-class="{'label-3-padding': ip.label3}">
+              <p>{{ip.label1}}</p>
+              <p>{{ip.label2}}</p>
+              <p>{{ip.label3}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="c-3 wrap-categories">
+          <div class="ethernet-row ipnetwork-row">
+            <div class="c-12">
+              <p class="ipnetwork-title">Ethernet Groups</p>
+              <p><a href="">Add Group</a></p>
+            </div>
+          </div>
+          <div class="vlans-row ipnetwork-row">
+            <div class="c-12">
+              <p class="ipnetwork-title">VLANS (Eth Devices)</p>
+              <p><a href="">Add IP Interface</a></p>
+            </div>
+          </div>
+          <div class="ipnetwork-row ip-interfaces-row">
+            <div class="c-12">
+              <p class="ipnetwork-title">IP Interfaces</p>
+              <p><a href="">Add IP Interface</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row physical-ports">
+        <p class="ipnetwork-title">Physical Ports</p>
+        <div class="wrap-port-group" ng-repeat="lan in ipnetwork.physicalModules">
+          <div>
+            <p class="lan-name">{{lan.name}}</p>
+            <div ng-repeat="port in lan.ports" class="physical-port">
+              <p class="tooltipInfo" title="{{port.status.tooltip.text}}"><img src="img/port.png" alt=""></p>
+              <p>{{port.label1}}</p>
+              <p>{{port.label2}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.tooltipster.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="drawLine.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

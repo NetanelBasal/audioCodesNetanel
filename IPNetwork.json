@@ -1,0 +1,275 @@
+{
+  "physicalModules": [
+    {
+      "name": "1 LAN GE",
+      "ports": [
+        {
+          "id": 0,
+          "label1": "Port 0",
+          "label2": "GE_1_0",
+          "status": {
+            "type": "connected",
+            "tooltip": {
+              "text": "Connected",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        },
+        {
+          "id": 1,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        },
+                {
+          "id": 1,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        },
+                {
+          "id": 1,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        }
+      ]
+    },
+    {
+      "name": "2 LAN GE",
+      "ports": [
+        {
+          "id": 4,
+          "label1": "Port 0",
+          "label2": "GE_2_0",
+          "status": {
+            "type": "disconnected",
+            "tooltip": {
+              "text": "Disconnected",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "102"
+          }
+        },
+        {
+          "id": 5,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "102"
+          }
+        },
+                {
+          "id": 1,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        },
+                {
+          "id": 1,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        }
+      ]
+    },
+        {
+      "name": "3 LAN GE",
+      "ports": [
+        {
+          "id": 4,
+          "label1": "Port 0",
+          "label2": "GE_2_0",
+          "status": {
+            "type": "disconnected",
+            "tooltip": {
+              "text": "Disconnected",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "102"
+          }
+        },
+        {
+          "id": 5,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "102"
+          }
+        },
+                {
+          "id": 1,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        },
+                {
+          "id": 1,
+          "label1": "Port 1",
+          "label2": "GE_1_1",
+          "status": {
+            "type": "idle",
+            "tooltip": {
+              "text": "Idle",
+              "type": "info"
+            }
+          },
+          "connectedTo": {
+            "id": "101"
+          }
+        }
+      ]
+    }
+  ],
+  "ethernetGroups": [
+    {
+      "id": 101,
+      "label1": "#0 [Group_0]",
+      "status": "invalidRef",
+      "statusTooltip": "Invalid Ref",
+      "tooltip": {
+        "text": "",
+        "type": ""
+      },
+      "vlans": [
+        {
+          "label1": "#0 [Operation]",
+          "label2": "VLAN ID = 1",
+          "label3": "(untagged)",
+          "status": "invalidRef",
+          "statusTooltip": "Invalid Ref",
+          "tooltip": {
+            "text": "",
+            "type": ""
+          },
+          "ipInterfaces": [
+            {
+              "label1": "#0 [Managements]",
+              "label2": "192.168.100.111",
+              "status": "invalidRef",
+              "statusTooltip": "Invalid Ref",
+              "tooltip": {
+                "text": "",
+                "type": ""
+              },
+              "icons": {
+                  "text": "m",
+                  "active": true
+                }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "label1": "#1 [Group_1]",
+      "vlans": [
+        {
+          "label1": "#1 [WAN]",
+          "label2": "192.168.100.111",
+          "label3": "",
+          "status": "invalidRef",
+          "statusTooltip": "Invalid Ref",
+          "ipInterfaces": [
+            {
+              "label1": "#1 [WAN]",
+              "label2": "192.168.100.111",
+              "icons": {
+                "icon": {
+                  "text": "m",
+                  "active": false
+                }
+              }
+            },
+            {
+              "label1": "#2 [WAN2]",
+              "label2": "192.168.100.111",
+              "icons": {
+                "icon": {
+                  "text": "m",
+                  "active": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

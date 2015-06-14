@@ -10,3 +10,76 @@
     clear: both;
   }
 }
+
+.tooltipster-Invalid {
+  border-radius: 0px;
+  border: 1px solid #EF40A5;
+  background: #FDE6F3;
+  color: #666666;
+}
+.tooltipster-Invalid .tooltipster-content {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+}
+
+.tooltipster-info{
+  border-radius: 0px;
+  border: 1px solid #D3C399;
+  background: #FFFBC9;
+  color: #666666;
+}
+.tooltipster-info .tooltipster-content{
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+}
+
+.tooltipster-srd{
+  border-radius: 0px;
+  border: 1px solid #475561;
+  background: #475561;
+  color: #E2E3E5;
+}
+.tooltipster-srd .tooltipster-content{
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px 10px;
+  span {
+    display: inline-block;
+    text-align: center;
+  }
+  p {
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid #B0B6BB;
+  }
+}
+
+.sqaureBase {
+  &::before {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    transform: translateY(-1px);
+    vertical-align: middle;
+    display: inline-block;
+    content: '';
+  }
+
+}
+
+.green-square {
+  .sqaureBase;
+  &::before {
+    background: #A6CC90;
+  }
+}
+
+.silver-square {
+    .sqaureBase;
+    &::before {
+      background: #C6C6C6;
+      border: 1px dashed #fff;
+  }
+}

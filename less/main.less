@@ -3,6 +3,7 @@
 @import 'grid';
 @import 'mixins';
 @import 'helpers';
+@import 'ipnetwork';
 
 body {
   font-size: 12px;
@@ -142,7 +143,7 @@ body {
 .mainBox {
   width: 90%;
   margin: 0 auto;
-  height: 200px;
+  height: 220px;
   border: 3px solid #B6E0FF;
   border-radius: 7px;
   position: absolute;
@@ -187,11 +188,6 @@ body {
     }
   }
 
-  .SIPDOWN {
-    .SIP {
-      margin-left: 12em;
-    }
-  }
 
   .SIPUP {
     left: 66%;
@@ -274,17 +270,25 @@ body {
   hr {
     margin-bottom: 5px;
   }
-    
+
   a {
     display: block;
     padding-bottom:10px;
     color:#64707B;
     font-size: 12px;
   }
-  
 }
 
 
 .show {
   display: block !important;
+}
+
+.no-gw {
+  #SBCSection, #REALMSection {
+    width: 50%;
+  }
+  .IPGroup {
+      margin: 370px auto auto;
+  }
 }

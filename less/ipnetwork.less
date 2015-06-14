@@ -1,0 +1,128 @@
+.ipnetwork {
+  width: 90%;
+  height: 478px;
+  position: relative;
+  border: 1px solid #C9CED3;
+  overflow: hidden;
+  padding: 50px 10px 20px 10px;
+}
+
+.ipnetwork-title {
+  font-size: 18px;
+  color:#626C76;
+  ~ p a {
+    color: #5B8BD3;
+    display: inline-block;
+    padding-bottom: 10px;
+    &::before {
+      content: '+';
+      border:2px solid #B9D9F2;
+      border-radius: 4px;
+      width:17px;
+      height: 17px;
+      margin-right: 5px;
+      line-height: 14px;
+      font-weight: bold;
+      text-align: center;
+      color:#388ED9;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.ipnetwork-line {
+  margin-bottom: 1em;
+  &:not(:last-child) {
+    border-bottom: 1px solid #EFEFEF;
+  }
+}
+
+
+.physical-ports {
+  margin-top: 8em;
+  display: flex;
+  .ipnetwork-title {
+    margin-right: 2em;
+  }
+  .wrap-port-group {
+    margin-right: 5px;
+    position: relative;
+    display: flex;
+    > div {
+      display: flex;
+    }
+     &:first-of-type .lan-name{
+      border-bottom-left-radius: 6px;
+    }
+      &:last-of-type .lan-name{
+      border-bottom-right-radius: 6px;
+    }
+  }
+
+  .lan-name {
+    position: absolute;
+    top: 104%;
+    background-color: #3A3A3A;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    padding: 2px 0;
+
+
+  }
+
+  .physical-port {
+    width: 65px;
+    height: 72px;
+    color:#fff;
+    padding-top: 7px;
+    font-size: 12px;
+    text-align: center;
+    background: rgba(0,138,224,1);
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+}
+
+
+.ipnetwork-square {
+  border: 2px solid #539EE0;
+  border-radius: 5px;
+  padding:15px 5px;
+  text-align: center;
+  font-size: 10px;
+  max-height: 55px;
+  height: 55px;
+}
+.ether-group {
+  display: inline-block;
+  margin-right: 1em;
+  &:first-of-type {
+    margin-left: 15em;
+  }
+  .ipnetwork-square  {
+    margin-top: 5px;
+  }
+}
+.wrap-categories {
+    margin-top: -160px;
+}
+.label-3-padding {
+   padding: 5px;
+}
+.group-name {
+  position: relative;
+  top:120px;
+}
+.ip-interfaces {
+  position: relative;
+  top: -120px;
+}
+
+.ip-interfaces, .vlans {
+  display: flex;
+  > div {
+    flex: 1;
+  }
+}
